@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+int main() {
+    Node* head = new Node();
+    Node* second = new Node();
+    Node* third = new Node();
+
+    head->data = 10;
+    second->data = 20;
+    third->data = 30;
+
+    head->next = second;
+    second->next = third;
+    third->next = NULL;
+
+    Node* temp = head;
+    int count = 0;
+
+    int array[10];   // ✅ Declare outside any loop
+
+    cout << "Linked List elements: ";
+    while (temp != NULL) {
+        cout << temp->data << " ";
+        array[count] = temp->data;  // ✅ Use here
+        count++;
+        temp = temp->next;
+    }
+
+    cout << "\nNumber of nodes: " << count << endl;
+
+    cout << "Array elements stored from linked list: ";
+    for (int i = 0; i < count; i++) {
+        cout << array[i] << " ";
+    }
+
+    return 0;
+}
