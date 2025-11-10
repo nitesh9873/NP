@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std ;
+int main (){
+
+
+int array[]= {23,45,78,56,999,80};
+int n = sizeof(array) / sizeof(array[0]);
+for (int  i = 0; i < n-1; i++)
+{
+     int min_index=i;
+  for (int  j = i+1; j < n; j++)
+  {
+    if (array[j]<array[min_index])
+    {
+       min_index=j;
+    }
+    
+    else{
+        swap(array[j],array[min_index]) ;
+    }
+    
+  }
+  
+}
+
+for (int i = 0; i < n+1; i++)
+{
+   cout<<array[i] <<" ";
+}
+
+
+
+
+    return 0 ; 
+}
