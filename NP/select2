@@ -1,0 +1,58 @@
+//************>>>>>>*******test case to pass selection sort in striver sheet******<<<<<<*************
+
+/*class Solution {
+public:
+    vector<int> selectionSort(vector<int>& nums) {
+
+
+        for (int  i = 0; i < nums.size()-1; i++)
+        {
+            int min_index=i;
+            for (int j = i+1; j < nums.size(); j++)
+            {
+                if (nums[j]<nums[min_index])
+                {
+                    min_index=j;
+                }
+                
+            }
+            if (min_index != i) {
+    swap(nums[i], nums[min_index]);
+}
+
+            
+        }
+         return nums;
+
+    }
+};
+*/
+/*
+class Solution {
+  public:
+    string longest(vector<string>& arr) {
+       for(int i =0;arr.size()-1;i++){
+           
+        int min_index= i ;
+        for(int j= i+1;j<arr.size();j++){
+            if(arr[j]>arr[min_index]){
+                min_index=j;
+                
+                
+                
+            }
+            
+            if(min_index!=i){
+                
+               swap(arr[i],arr[min_index]) ;
+            }
+          
+        }
+        return arr;
+           
+           
+       }
+        
+    }
+};
+*/
